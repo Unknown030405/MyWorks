@@ -1,0 +1,13 @@
+00H:34M:19S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:34M:19S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:34M:19S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:34M:19S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:38M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:38M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:38M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:38M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+00H:38M:46S in thread 2 sixth() missing 1 required positional argument: 'name'
+Please restart 4:500H:38M:47S in thread 3 sixth() missing 1 required positional argument: 'name'
+Please restart 6:700H:38M:47S in thread 0 sixth() missing 1 required positional argument: 'name'
+Please restart 0:100H:38M:47S in thread 1 sixth() missing 1 required positional argument: 'name'
+Please restart 2:3

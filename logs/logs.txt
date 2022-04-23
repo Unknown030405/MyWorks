@@ -1,0 +1,12 @@
+00H:38M:46S successfully ended counting from 4 to 5
+00H:38M:47S successfully ended counting from 6 to 7
+00H:38M:47S successfully ended counting from 0 to 1
+00H:38M:47S successfully ended counting from 2 to 3
+00H:39M:48S successfully ended counting from 0 to 1
+00H:39M:48S successfully ended 0th thread
+00H:39M:48S successfully ended counting from 2 to 3
+00H:39M:48S successfully ended 1th thread
+00H:39M:48S successfully ended counting from 6 to 7
+00H:39M:48S successfully ended 3th thread
+00H:39M:48S successfully ended counting from 4 to 5
+00H:39M:48S successfully ended 2th thread
