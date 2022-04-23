@@ -32,10 +32,10 @@ async def start(num, left, right, session):
 async def main():
     session = aiohttp.ClientSession()
     tasks = [
-        asyncio.create_task(start(0, 0, 6, session)),
-        asyncio.create_task(start(1, 6, 11, session)),
-        asyncio.create_task(start(2, 11, 16, session)),
-        asyncio.create_task(start(3, 16, 21, session)),
+        asyncio.create_task(start(0, 0, 7, session)),
+        asyncio.create_task(start(1, 7, 15, session)),
+        asyncio.create_task(start(2, 15, 22, session)),
+        asyncio.create_task(start(3, 22, 29, session)),
     ]
     await asyncio.gather(*tasks)
     await session.close()

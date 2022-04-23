@@ -17,7 +17,7 @@ prepositions = {'cercare': 'di', 'provare': 'a', 'dimenticare': 'di', 'sperare':
                 'rinunciare': 'a', 'fingere': 'di', 'riuscire': 'a', 'cercare': 'di', 'provare': 'a', 'osare': 'a',
                 'ricordare': 'di', 'tentare': 'di'}
 
-PAGES = 1345
+PAGES = 5000
 # PAGES = 5
 
 
