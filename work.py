@@ -213,13 +213,14 @@ async def fifth(path, filename, name):
                     counter[3] * 100 / counter[4]])
     output = [verb]
     output.extend(counter)
-    with open(rf'res\output{name}.csv', 'a') as file:
+    with open(os.path.join('res', f'output{name}.csv'), 'a') as file:
         csv.writer(file).writerow(output)
 
 
 async def sixth(name, num=None):
-    foldername = r'.\res'
+    foldername = r'res'
     files = os.listdir(foldername)
+    print(files)
     for item in files:
         path = os.path.join(foldername, item)
         if item != 'work.py' and item[-3::] == "txt":
