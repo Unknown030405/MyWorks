@@ -8,7 +8,7 @@ import aiohttp
 import work
 
 COEFF = 1
-MACHINE_NAME = "_DEXP_laptop"
+MACHINE_NAME = "_acer_laptop"
 
 
 async def start(num, left, right, session):
@@ -32,10 +32,8 @@ async def start(num, left, right, session):
 async def main():
     session = aiohttp.ClientSession()
     tasks = [
-        asyncio.create_task(start(0, 0, 7, session)),
-        asyncio.create_task(start(1, 7, 15, session)),
-        asyncio.create_task(start(2, 15, 22, session)),
-        asyncio.create_task(start(3, 22, 29, session)),
+        asyncio.create_task(start(0, 40, 46, session)),
+        asyncio.create_task(start(1, 46, 51, session))
     ]
     await asyncio.gather(*tasks)
     await session.close()

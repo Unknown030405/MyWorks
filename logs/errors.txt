@@ -2,3 +2,12 @@
 00H:45M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
 00H:45M:45S Server disconnected
 00H:45M:45S [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+08H:39M:16S 
+08H:39M:16S 
+08H:56M:55S 
+08H:56M:55S 
+09H:49M:53S 
+09H:49M:53S 
+09H:49M:55S Cannot connect to host corpora.dipintra.it:443 ssl:default [getaddrinfo failed]
+09H:49M:56S Cannot connect to host corpora.dipintra.it:443 ssl:default [getaddrinfo failed]
+11H:58M:53S Server disconnected

@@ -1,0 +1,4 @@
+11H:58M:53S successfully ended counting from 46 to 51
+11H:58M:53S successfully ended 1th thread
+13H:33M:42S successfully ended counting from 40 to 46
+13H:33M:43S successfully ended 0th thread
