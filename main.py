@@ -29,14 +29,20 @@ async def start(num, left, right, session):
                        f"Please restart {left}:{right}" + "\n")
 
 
-async def main():
-    session = aiohttp.ClientSession()
-    tasks = [
-        asyncio.create_task(start(0, 40, 46, session)),
-        asyncio.create_task(start(1, 46, 51, session))
-    ]
-    await asyncio.gather(*tasks)
-    await session.close()
+async def main(save=False):
+    if save:
+        with open(os.path.join('res', f'output{MACHINE_NAME}.csv'), 'w') as file:
+            csv.writer(file).writerow(['verbs', 'questo', 'quello', 'lo',
+                                       'cio', 'sum', 'questo', 'quello', 'lo', 'cio'])
+        await work.sixth(MACHINE_NAME)
+    else:
+        session = aiohttp.ClientSession()
+        tasks = [
+            asyncio.create_task(start(0, 28, 34, session)),
+            asyncio.create_task(start(1, 34, 40, session))
+        ]
+        await asyncio.gather(*tasks)
+        await session.close()
 
 
 if __name__ == '__main__':
@@ -44,6 +50,6 @@ if __name__ == '__main__':
     print(t0)
     if os.name == 'nt':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main())
+    asyncio.run(main(True))
     delta = int((time.time() - t0) / COEFF)
     print(f"{datetime.now().strftime('%HH:%MM:%SS')} It took {delta} min")
