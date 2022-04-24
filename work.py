@@ -220,9 +220,7 @@ async def fifth(path, filename, name):
 async def sixth(name, num=None):
     foldername = r'.\res'
     files = os.listdir(foldername)
-    with open(rf'res\output{name}.csv', 'a') as file:
-        csv.writer(file).writerow(['verbs', 'questo', 'quello', 'lo', 'cio', 'sum', 'questo', 'quello', 'lo', 'cio'])
     for item in files:
         path = os.path.join(foldername, item)
-        if item != 'work.py':
+        if item != 'work.py' and item[-3::] == "txt":
             await fifth(path, item, name)

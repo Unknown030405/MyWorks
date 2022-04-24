@@ -1,4 +1,5 @@
 import os
+import csv
 import time
 import asyncio
 from datetime import datetime
@@ -8,7 +9,7 @@ import aiohttp
 import work
 
 COEFF = 1
-MACHINE_NAME = "_DEXP_laptop"
+MACHINE_NAME = "_DEXP_laptop(1)"
 
 
 async def start(num, left, right, session):
@@ -29,16 +30,22 @@ async def start(num, left, right, session):
                        f"Please restart {left}:{right}" + "\n")
 
 
-async def main():
-    session = aiohttp.ClientSession()
-    tasks = [
-        asyncio.create_task(start(0, 0, 7, session)),
-        asyncio.create_task(start(1, 7, 15, session)),
-        asyncio.create_task(start(2, 15, 22, session)),
-        asyncio.create_task(start(3, 22, 29, session)),
-    ]
-    await asyncio.gather(*tasks)
-    await session.close()
+async def main(save=False):
+    if save:
+        with open(rf'res\output{MACHINE_NAME}.csv', 'w') as file:
+            csv.writer(file).writerow(
+                ['verbs', 'questo', 'quello', 'lo', 'cio', 'sum', 'questo', 'quello', 'lo', 'cio'])
+        await work.sixth(MACHINE_NAME)
+    else:
+        session = aiohttp.ClientSession()
+        tasks = [
+            asyncio.create_task(start(0, 0, 7, session)),
+            asyncio.create_task(start(1, 7, 14, session)),
+            asyncio.create_task(start(2, 14, 21, session)),
+            asyncio.create_task(start(3, 21, 28, session)),
+        ]
+        await asyncio.gather(*tasks)
+        await session.close()
 
 
 if __name__ == '__main__':
@@ -46,6 +53,7 @@ if __name__ == '__main__':
     print(t0)
     if os.name == 'nt':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main())
+    asyncio.run(main(True))
     delta = int((time.time() - t0) / COEFF)
+    print(time.time())
     print(f"{datetime.now().strftime('%HH:%MM:%SS')} It took {delta} min")
